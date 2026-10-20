@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bluetooth-dualboot-sync"
+version = "0.1.0"
+description = "Share a classic Bluetooth pairing between Windows and Linux on one dual-boot computer"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "wzxsph"}]
+dependencies = ["python-registry==1.3.1"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+]
+
+[project.scripts]
+bt-dualboot-sync = "bt_dualboot_sync.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/wzxsph/bluetooth-dualboot-sync"
+Issues = "https://github.com/wzxsph/bluetooth-dualboot-sync/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
